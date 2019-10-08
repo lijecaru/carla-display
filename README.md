@@ -1,7 +1,9 @@
 
 # Carla Display in Web Browser
 
-This repo is used for displaying Carla in a web browser (i.e. Chrome, Safari...) to realize visulization of Carla in a different (or same) machine.
+This repo is used for displaying Carla in a web browser (i.e. Chrome, Safari...) to realize visulization of Carla in a different (or same) machine. 
+
+Currently only compatible with Carla 0.9.6 version
 
 ![](images/example.gif)
 
@@ -16,9 +18,9 @@ This repo is used for displaying Carla in a web browser (i.e. Chrome, Safari...)
 2. Draw something (i.e. trajectories) in the web browser.
 3. TBD
 
-## How to use it?
+## Build
 
-Following building steps are ONLY tested on Ubuntu 18.04
+Following building steps are ONLY tested on Ubuntu 18.04 with Carla 0.9.6
 
 backend part (should be in the same machine of the carla simulator)
 
@@ -49,10 +51,6 @@ $ cmake ../
 # make executable, replace the number with your number of cores to achieve faster building speed
 $ make platform -j8                                    
 # it will generate the binary program at REPO_ROOT_FOLDER/bin
-
-# to launch the backend, type the following command
-# the backend should be launched after launching the carla simulator
-$ ../bin/platform
 ```
 
 In another terminal
@@ -77,13 +75,35 @@ $ yarn
 $ cd examples/get-started
 $ yarn
 
-
 # optional steps need to be done if you want to visualize a carla simulator on the cloud
 # if you are using all these programs in a local machine, just ignore the following step
-# if you are running this frontend in a cloud machine, please replace the serverUrl of 'localhost:8081' with 'YOUR_CLOUD_MACHINE_IP:8081' in src/log-from-live.js
+# if you are running this frontend in a cloud machine, please replace the serverUrl of 'localhost:8081' with 'YOUR_CLOUD_MACHINE_PUBLIC_IP:8081' in src/log-from-live.js
+```
 
+## How to use?
+```bash
+# In one terminal
+# go into your compiled carla simulator's folder
+$ cd CARLA_SIMULATOR_PATH
+$ ./CarlaUE4.sh
+
+# In another terminal
+# go into the backend folder
+$ cd carla-display-backend
+# to launch the backend, type the following command
+# the backend should be launched after launching the carla simulator
+$ ./bin/platform
+
+# In another terminal
+# go into the frontend folder
+$ cd carla-display-frontend/examples/get-started
 # start frontend 
 $ yarn start-live
+
+# In another terminal
+# run your own python client script
+$ cd CARLA_SIMULATOR_PATH/PythonAPI/examples
+$ python spawn_npc.py
 ```
 
 ## Third party libraries
