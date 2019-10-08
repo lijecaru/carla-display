@@ -3,6 +3,8 @@
 
 This repo is used for displaying Carla in a web browser (i.e. Chrome, Safari...) to realize visulization of Carla in a different (or same) machine.
 
+![](images/example.gif)
+
 ## Use case
 1. Running carla simulator in the cloud and visualize it in your local machine's web browser.
 2. Draw something (i.e. trajectories) in the web browser.
@@ -77,3 +79,11 @@ $ yarn
 # start frontend 
 $ yarn start-live
 ```
+
+## Third party libraries
+1. [Uber streetscape.gl](https://github.com/uber/streetscape.gl) as frontend
+2. [nlohmann json](https://github.com/nlohmann/json)
+3. [ReneNyffenegger cpp-base64](https://github.com/ReneNyffenegger/cpp-base64)
+4. [lvandeve lodepng](https://github.com/lvandeve/lodepng)
+5. [mcrodrigues macro-logger](https://github.com/dmcrodrigues/macro-logger)
+6. [jessey-git fx-gltf](https://github.com/jessey-git/fx-gltf)
