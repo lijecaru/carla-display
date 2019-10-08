@@ -71,7 +71,7 @@ $ git clone https://github.com/mellocolate/carla-display-frontend.git
 
 # install dependencies
 $ cd carla-display-frontend
-$ yarn
+$ yarn bootstrap
 $ cd examples/get-started
 $ yarn
 
