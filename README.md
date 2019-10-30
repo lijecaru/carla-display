@@ -5,6 +5,9 @@ This repo is used for displaying Carla in a web browser (i.e. Chrome, Safari...)
 
 Currently only compatible with Carla 0.9.6 version
 
+Demo use case from [Wenhao Ding](https://github.com/GilgameshD)
+![](images/example_2.gif)
+
 ![](images/example.gif)
 
 ## Source Code
